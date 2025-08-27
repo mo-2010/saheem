@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المبرمج سهم</title>
+<style>
+  /* عام */
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+  body, html { height: 100%; overflow-x: hidden; background-color: #0d0d0d; color: #e0e0e0; }
+
+  /* شاشة التحميل */
+  #loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  .spinner {
+    border: 6px solid #1a1a1a;
+    border-top: 6px solid #1e90ff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+  /* الخلفية الجزيئية */
+  #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  /* رأس الموقع */
+  header { background-color: rgba(26,26,26,0.8); padding: 20px; text-align: center; border-bottom: 1px solid #333; backdrop-filter: blur(5px); }
+  header h1 { color: #1e90ff; font-size: 2.5em; }
+  nav { margin-top: 10px; }
+  nav a { margin: 0 15px; font-weight: bold; color: #e0e0e0; transition: 0.3s; }
+  nav a:hover { color: #63b3ed; }
+
+  /* الأقسام */
+  section { padding: 60px 20px; max-width: 1000px; margin: auto; }
+  .card { background-color: rgba(40,40,40,0.9); border-radius: 15px; padding: 30px; margin-bottom: 40px; box-shadow: 0 0 15px rgba(0,0,0,0.5); transition: transform 0.3s; }
+  .card:hover { transform: scale(1.05); }
+  h2 { color: #1e90ff; margin-bottom: 20px; }
+  .skills-list, .projects-list { display: flex; flex-wrap: wrap; gap: 15px; }
+  .skills-list div, .projects-list div { flex: 1 1 200px; background-color: #292929; padding: 15px 20px; border-radius: 10px; text-align: center; transition: transform 0.3s; }
+  .skills-list div:hover, .projects-list div:hover { transform: scale(1.05); }
+
+  /* أزرار التواصل الاجتماعي */
+  .social { display: flex; justify-content: center; gap: 20px; margin-top: 20px; }
+  .social a { display: inline-block; width: 40px; height: 40px; background-color: #1e90ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
+  .social a:hover { background-color: #63b3ed; }
+  .social svg { fill: #fff; width: 20px; height: 20px; }
+
+  footer { text-align: center; padding: 20px; border-top: 1px solid #333; color: #888; }
+
+</style>
+</head>
+<body>
+
+<!-- شاشة التحميل -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- الخلفية الجزيئية -->
+<div id="particles-js"></div>
+
+<header>
+  <h1>المبرمج سهم</h1>
+  <nav>
+    <a href="#about">عنّي</a>
+    <a href="#skills">المهارات</a>
+    <a href="#projects">المشاريع</a>
+    <a href="#contact">تواصل معي</a>
+  </nav>
+</header>
+
+<section id="about" class="card">
+  <h2>عنّي</h2>
+  <p>أنا سهم، مبرمج شغوف بتطوير الويب وتطبيقات سطح المكتب. أحب التعلم وتجربة تقنيات جديدة.</p>
+</section>
+
+<section id="skills" class="card">
+  <h2>المهارات</h2>
+  <div class="skills-list">
+    <div>HTML</div>
+    <div>CSS</div>
+    <div>JavaScript</div>
+    <div>Python</div>
+    <div>React</div>
+  </div>
+</section>
+
+<section id="projects" class="card">
+  <h2>المشاريع</h2>
+  <div class="projects-list">
+    <div>مشروع 1</div>
+    <div>مشروع 2</div>
+    <div>مشروع 3</div>
+    <div>مشروع 4</div>
+  </div>
+</section>
+
+<section id="contact" class="card">
+  <h2>تواصل معي</h2>
+  <div class="social">
+    <a href="#" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M22,12A10,10 0 1,0 12,22A10,10 0 0,0 22,12Z"/></svg>
+    </a>
+    <a href="#" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 سهم. جميع الحقوق محفوظة.
+</footer>
+
+<!-- مكتبة الجزيئات -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+  // إعداد الجزيئات
+  particlesJS('particles-js', {
+    "particles": {
+      "number": {"value": 80},
+      "color": {"value": "#1e90ff"},
+      "shape": {"type": "circle"},
+      "opacity": {"value": 0.5},
+      "size": {"value": 3},
+      "line_linked": {"enable": true, "distance": 150, "color": "#1e90ff", "opacity": 0.4, "width": 1},
+      "move": {"enable": true, "speed": 2}
+    },
+    "interactivity": {
+      "events": {
+        "onhover": {"enable": true, "mode": "repulse"}
+      }
+    },
+    "retina_detect": true
+  });
+
+  // إزالة شاشة التحميل بعد التحميل
+  window.addEventListener("load", () => {
+    document.getElementById("loader").style.display = "none";
+  });
+</script>
+
+</body>
+</html>
