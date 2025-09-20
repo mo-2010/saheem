@@ -1,108 +1,144 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
+uop
+dfw
+wd/sjuo
+sjuo
+sjuo
+adf<!doctype html>
+<html lang="ar">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>مبرمج سهم — Portfolio</title>
-  <meta name="description" content="موقع مبرمج سهم — محفظة أعمال وتصميم واجهة رسومية Cyberpunk" />
+  <title>مرحبا — سهم كامل أبو غليون</title>
   <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background:#0a0a0f;
-      color:#e6f0ff;
-      overflow-x:hidden;
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+      direction: rtl;
     }
-    #bgCanvas{position:fixed;inset:0;z-index:0}
-    .container{position:relative;z-index:2;min-height:100vh;display:flex;flex-direction:column;align-items:center;gap:28px;padding:40px}
-    header{width:100%;max-width:1200px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{width:56px;height:56px;border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 30px rgba(122,0,255,0.12);font-weight:700;font-size:20px}
-    .brand h1{font-size:20px;letter-spacing:0.6px}
-    .brand p{font-size:12px;opacity:0.8;margin-top:2px}
-    nav .socials{display:flex;gap:10px}
-    .social-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.03);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.03);font-size:13px;color:#fff;text-decoration:none}
-    .social-btn svg{width:16px;height:16px;opacity:0.95}
-    .hero{width:100%;max-width:1200px;display:grid;grid-template-columns:1fr;gap:28px;align-items:start}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:16px;padding:20px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 8px 40px rgba(0,0,0,0.6);backdrop-filter: blur(6px);}
-    .profile{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
-    .avatar{width:160px;height:160px;border-radius:18px;overflow:hidden;display:flex;align-items:center;justify-content:center;border:3px solid rgba(255,255,255,0.05)}
-    .avatar img{width:100%;height:100%;object-fit:cover}
-    .name{font-size:20px;font-weight:700}
-    .role{font-size:13px;opacity:0.9}
-    .tag{display:inline-block;margin-top:6px;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,#00ffd5,#00aaff);color:#05101a;font-weight:700;font-size:12px}
-    .about{line-height:1.6;font-size:14px;color:rgba(230,240,255,0.95)}
-    .cta-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-    .btn{padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);cursor:pointer;font-weight:700;background:linear-gradient(90deg,transparent, rgba(255,255,255,0.02));}
-    .btn.primary{background:linear-gradient(90deg,#ff007a,#7a00ff);color:#fff;box-shadow:0 8px 30px rgba(122,0,255,0.12)}
-    .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
-    .project{padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);min-height:120px;display:flex;flex-direction:column;justify-content:space-between;transition:transform 0.2s ease, box-shadow 0.2s ease}
-    .project:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(122,0,255,0.08)}
-    .project h3{font-size:15px}
-    .project p{font-size:13px;opacity:0.9}
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .skill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:700}
-    footer{width:100%;max-width:1200px;padding:18px 0;display:flex;justify-content:space-between;align-items:center}
-    .foot-left{opacity:0.8}
-    #loader{position:fixed;inset:0;background:linear-gradient(180deg,#05020a,rgba(5,2,10,0.7));display:flex;align-items:center;justify-content:center;z-index:9999}
-    .spinner{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;box-shadow:0 8px 40px rgba(122,0,255,0.12);}
-    .spinner:before{content:'';display:block;width:48px;height:48px;border-radius:50%;border:4px solid transparent;border-top-color:#00e6ff;animation:spin 1.2s linear infinite}
-    @keyframes spin{to{transform:rotate(1turn)}}
+    canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h1 { font-size: 24px; margin-bottom: 10px; }
+    p { color: #ccc; margin-bottom: 20px; }
+    .services, .vulns { text-align: right; margin-top: 20px; }
+    .services h2, .vulns h2 { font-size: 18px; margin-bottom: 10px; }
+    .service, .vuln { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 10px; margin: 6px 0; }
+    .social a { color: #7fe8ff; font-weight: bold; text-decoration: none; }
+    .lang { margin-top: 20px; }
+    footer { margin-top: 30px; font-size: 14px; color: #aaa; }
   </style>
 </head>
 <body>
-  <div id="loader"><div class="spinner"></div></div>
-  <canvas id="bgCanvas"></canvas>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo"><img src="LOGO.PNG" alt="Logo" style="width:100%;height:100%;border-radius:12px;object-fit:cover"></div>
-        <div><h1>مبرمج سهم</h1><p>مطور واجهات Front-end</p></div>
-      </div>
-      <nav>
-        <div class="socials">
-          <a class="social-btn" href="https://www.instagram.com/s_b._52/" target="_blank" rel="noopener noreferrer">إنستجرام</a>
-        </div>
-      </nav>
-    </header>
-    <main class="hero">
-      <aside class="card profile">
-        <div class="avatar"><img src="LOGO.PNG" alt="avatar"></div>
-        <div class="name">سهم</div>
-        <div class="role">مطور واجهات — HTML / CSS / JavaScript</div>
-        <div class="tag">مبتدئ → محترف</div>
-        <p class="about">مرحباً! أنا سهم، أصنع واجهات أنيقة وبسيطة مع تجربة مستخدم سلسة.</p>
-        <div class="cta-row">
-          <a class="btn primary" href="#projects">مشاريع</a>
-          <a class="btn" href="#contact">تواصل</a>
-        </div>
-        <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
-        <div>
-          <div style="font-size:13px;opacity:0.9;margin-bottom:8px">مهارات</div>
-          <div class="skills">
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-          
-          </div>
-        </div>
-      </aside>
-      <section class="card">
-        <h2 id="projects" style="margin-bottom:12px">أخر المشاريع</h2>
-        <div class="projects-grid">
-          <article class="project"><h3>موقع تعريفي</h3><p>واجهة بسيطة وسلسة</p></article>
-          <article class="project"><h3>صفحة هبوط</h3><p>تصميم واضح ومرن</p></article>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="foot-left">© 2025 مبرمج سهم — جميع الحقوق محفوظة</div>
-      <div><a class="social-btn" href="https://www.instagram.com/s_b._52/" target="_blank">إنستجرام</a></div>
-    </footer>
+  <canvas id="stars"></canvas>
+  <div class="content">
+    <h1 id="title">مرحبا، أنا المبرمج سهم كامل أبو غليون</h1>
+    <p id="subtitle">مطور ومصمم مواقع · مكتشف ثغرات عالمية (وصفي)</p>
+    
+    <div class="services">
+      <h2 id="servicesTitle">الخدمات</h2>
+      <div class="service" id="svc1">تطوير واجهات أمامية (HTML, CSS, JS)</div>
+      <div class="service" id="svc2">تصميم تجربة مستخدم UX/UI</div>
+      <div class="service" id="svc3">أبحاث أمنية وتدقيق</div>
+    </div>
+    
+    <div class="vulns">
+      <h2 id="vulnTitle">أمثلة خبرة بالثغرات</h2>
+      <div class="vuln" id="v1">CSP: سياسات غير صارمة قد تسمح بتحميل موارد غير مرغوبة</div>
+      <div class="vuln" id="v2">AUTH: مشاكل منطقية قد تمنح صلاحيات خاطئة</div>
+      <div class="vuln" id="v3">INFO: تسريب معلومات حساسة عبر رسائل الخطأ</div>
+    </div>
+    
+    <div class="social">
+      <p>تواصل معي عبر <a href="https://instagram.com/s_b._52" target="_blank">@s_b._52</a></p>
+    </div>
+    
+    <div class="lang">
+      <button onclick="setLang('ar')">العربية</button>
+      <button onclick="setLang('en')">English</button>
+    </div>
+    
+    <footer id="footer">© جميع الحقوق محفوظة — سهم كامل أبو غليون</footer>
   </div>
+  
   <script>
-    window.addEventListener('load', ()=>{setTimeout(()=>{document.getElementById('loader').style.display='none'},500)});
-    const canvas = document.getElementById('bgCanvas'); const ctx = canvas.getContext('2d'); let w = canvas.width = innerWidth; let h = canvas.height = innerHeight; const particles = []; class P{constructor(){this.reset()}reset(){this.x=Math.random()*w;this.y=Math.random()*h;this.vx=(Math.random()-0.5)*0.4;this.vy=(Math.random()-0.5)*0.4;this.r=Math.random()*2+0.8;this.hue=Math.random()*140+180;}update(){this.x+=this.vx;this.y+=this.vy;if(this.x<0)this.x=w;if(this.x>w)this.x=0;if(this.y<0)this.y=h;if(this.y>h)this.y=0;}draw(){ctx.beginPath();ctx.fillStyle=`hsla(${this.hue},100%,65%,0.12)`;ctx.arc(this.x,this.y,this.r,0,Math.PI*2);ctx.fill()}}for(let i=0;i<100;i++)particles.push(new P()); function loop(){ctx.clearRect(0,0,w,h);for(const p of particles){p.update();p.draw()}requestAnimationFrame(loop);} loop(); window.addEventListener('resize',()=>{w=canvas.width=innerWidth;h=canvas.height=innerHeight});
+    // نجوم متحركة
+    const canvas = document.getElementById("stars");
+    const ctx = canvas.getContext("2d");
+    let w, h, stars = [];
+    function resize() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+      stars = Array.from({length: 150}, () => ({
+        x: Math.random()*w,
+        y: Math.random()*h,
+        r: Math.random()*2 + 0.5,
+        d: Math.random()*0.5
+      }));
+    }
+    function draw() {
+      ctx.clearRect(0,0,w,h);
+      ctx.fillStyle = "#fff";
+      stars.forEach(s => {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, 2*Math.PI);
+        ctx.fill();
+        s.y += s.d;
+        if(s.y > h) s.y = 0;
+      });
+      requestAnimationFrame(draw);
+    }
+    window.onresize = resize;
+    resize();
+    draw();
+    
+    // تغيير اللغة
+    const strings = {
+      ar: {
+        title: "مرحبا، أنا المبرمج سهم كامل أبو غليون",
+        subtitle: "مطور ومصمم مواقع · مكتشف ثغرات عالمية (وصفي)",
+        servicesTitle: "الخدمات",
+        svc1: "تطوير واجهات أمامية (HTML, CSS, JS)",
+        svc2: "تصميم تجربة مستخدم UX/UI",
+        svc3: "أبحاث أمنية وتدقيق",
+        vulnTitle: "أمثلة خبرة بالثغرات",
+        v1: "CSP: سياسات غير صارمة قد تسمح بتحميل موارد غير مرغوبة",
+        v2: "AUTH: مشاكل منطقية قد تمنح صلاحيات خاطئة",
+        v3: "INFO: تسريب معلومات حساسة عبر رسائل الخطأ",
+        footer: "© جميع الحقوق محفوظة — سهم كامل أبو غليون"
+      },
+      en: {
+        title: "Hello, I am developer Sahm Kamel Abu Ghlayon",
+        subtitle: "Web developer · UI designer · Security researcher",
+        servicesTitle: "Services",
+        svc1: "Front-end development (HTML, CSS, JS)",
+        svc2: "UX/UI design",
+        svc3: "Security research & auditing",
+        vulnTitle: "Vulnerability Experience Examples",
+        v1: "CSP: Weak policies may allow unwanted resource loads",
+        v2: "AUTH: Logic flaws may grant incorrect permissions",
+        v3: "INFO: Sensitive info leaks via error messages",
+        footer: "© All rights reserved — Sahm Kamel Abu Ghlayon"
+      }
+    };
+    function setLang(l) {
+      const s = strings[l];
+      for (let key in s) document.getElementById(key).textContent = s[key];
+      document.body.dir = (l === "ar" ? "rtl" : "ltr");
+    }
   </script>
 </body>
 </html>
